@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In | Stratcom</title>
+    <title>Log In | Stratcom UG</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/libraries.css' %}">
+
+  
 </head>
 <body>
     <!-- Section: Design Block -->
@@ -73,7 +76,7 @@
   
           <div class="card bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form action="/homepage">
+              <form method="post" class="form-group">
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row">
                     <div class="text-center">
@@ -86,22 +89,24 @@
   
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control" />
-                  <label class="form-label" for="form3Example3">Email address</label>
+                  <input type="text" id="form3Example3" class="form-control" placeholder="Enter Username eg AlexHunter23" />
+                  <label class="form-label" for="form3Example3">Username</label>
                 </div>
   
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
+                  <input type="password" id="form3Example4" class="form-control" placeholder="Enter a valid password"/>
                   <label class="form-label" for="form3Example4">Password</label>
                 </div>
   
                 <!-- Checkbox -->
                 <div class="form-check d-flex justify-content-center mb-4">
                   <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                  <label class="form-check-label" for="form2Example33">
+                  <label class="form-check-label" for="form2Example33" style="text-align: right;">
+                    <br>
                     Keep me logged in
-                  </label>
+                    
+                 </label>
                 </div>
 
                 <!-- Submit button -->
@@ -114,7 +119,7 @@
                 <div>
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Don't have an account?</p>
-                    <a href="signup2/">
+                    <a href="/signup">
                       <button type="button" class="btn btn-outline-danger">Create new</button>
                     </a>
                      
@@ -125,10 +130,10 @@
                 <div class="text-center py-4 align-items-center">
                     <p>Or else:</p>
                     <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39; margin: 5px; width: 100%;"
-                  type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
+                  type="submit"><i class="fa fa-google me-2"></i> Sign in with google</button>
 
                 <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998; margin: 5px; width: 100%;"
-                  type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
+                  type="submit"><i class="fa fa-facebook-f me-2"></i>Sign in with facebook</button>
                 </div>
                 
     
