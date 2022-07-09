@@ -18,7 +18,7 @@ def _str_(self):
   return str(self.owner)
 
 class User(models.Model):
-    name = models.CharField(max_length=10, default='studentx')
+    name = models.CharField(max_length=10)
     username = models.CharField(max_length=15)
     email = models.EmailField(unique=True)
     program = models.CharField(max_length=9)

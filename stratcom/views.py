@@ -42,35 +42,39 @@ def logout(request,*args,**kwargs):
     logout(request)
     return redirect("/login/")
 
-def signup(request):
+def signup(request,*args,**kwargs):
 
     if request.method== "POST":
         fname=request.POST['fname']
         uname=request.POST['username']
-        gmail=request.POST['email']
-        progie = request.POST['inlineRadioOptions']
-        uni = request.POST['institution']
+        email=request.POST['email']
+        inlineRadioOptions = request.POST['inlineRadioOptions']
+        institution = request.POST['institution']
         whatsapp = request.POST['contact']
         field = request.POST['interest']
         sex = request.POST['gender']
         pass1 = request.POST['password1']
         pass2 = request.POST['password2']
-
+        print("wazza")
         
         print(request.POST)
         if pass1== pass2:
+            print(pass1)
             try:
                 user = User.objects.create(
                     name= fname,
                     username = uname,
-                    email = gmail,
-                    program = progie,
-                    institution = uni,
+                    email = email,
+                    program = inlineRadioOptions,
+                    institution = institution,
                     contact = whatsapp,
                     field_of_interest = field,
                     gender = sex,
                     password = pass1,
                 )
+                user.set_password(pass1)
+                user.save()
+                
                 if request.FILES:
                     pp = request.FILES['pp']
                     UserProfile.objects.create (
@@ -89,4 +93,3 @@ def signup(request):
             messages.info(request,"passwords do not match")
 
     return render(request,"SignUp.html",{})
-
