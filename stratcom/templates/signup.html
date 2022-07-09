@@ -29,13 +29,18 @@
                   </div>
 
 
-                  <form action="/signup/" method="post" enctype="" name="myform">
+                  <form action="." method="post" enctype="" name="multipart/form-data">
                     {% csrf_token %}
+                    {% if messages %}
+                      {% for message in messages %}
+                        <h3>{{ message }}</h3>
+                      {% endfor %}
+                    {% endif %}
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
                           <input type="text" id="form3Example1m" name="fname" class="form-control form-control-lg"
-                            placeholder="Full Names" />
+                            placeholder="Full Names"/>
 
                         </div>
                       </div>
@@ -94,7 +99,7 @@
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="number" id="form3Example1n" name="contact" class="form-control form-control-lg"
+                            <input type="number" id="form3Example1n" name="number" class="form-control form-control-lg"
                               placeholder="WhatsApp Contact" />
   
                           </div>
@@ -146,7 +151,7 @@
                       <h6>Upload Placement Letter:</h6>
 
                       <!-- <label class="form-label" for="customFile"></label> -->
-                      <input type="file" class="form-control" id="customFile" />
+                      <input type="file" class="form-control" id="customFile" name = "pp" />
                     </div>
 
                     <div class="d-flex justify-content-end pt-3">

@@ -6,10 +6,9 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse,request
 from setuptools import find_namespace_packages
 import json
-from django.contrib.auth.models import User
-from . models import UserProfile,Gallery
+from . models import UserProfile,Gallery, User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login as auth_login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 
@@ -26,11 +25,11 @@ def login(request,*args,**kwargs):
         password=request.POST['password']
         user = authenticate(username=username, password=password)
         if user:
-            login(request, user)
-            next= request.GET.get("next")
-            if next:
-             return redirect(next)   
-            return redirect("/about/")
+            auth_login(request, user)
+            print("We almost there!!!")
+            print("We almost there!!!")
+            print("We almost there!!!")
+            return redirect('index')
         else:
             messages.info(request,"Invalid credentials")    
 
@@ -48,11 +47,12 @@ def signup(request,*args,**kwargs):
         fname=request.POST['fname']
         uname=request.POST['username']
         email=request.POST['email']
-        inlineRadioOptions = request.POST['inlineRadioOptions']
+        progie = request.POST['inlineRadioOptions']
         institution = request.POST['institution']
-        whatsapp = request.POST['contact']
+        whatsapp = request.POST['number']
         field = request.POST['interest']
         sex = request.POST['gender']
+        pp = request.POST['pp']
         pass1 = request.POST['password1']
         pass2 = request.POST['password2']
         print("wazza")
@@ -61,18 +61,14 @@ def signup(request,*args,**kwargs):
         if pass1== pass2:
             print(pass1)
             try:
-                user = User.objects.create(
-                    name= fname,
-                    username = uname,
-                    email = email,
-                    program = inlineRadioOptions,
-                    institution = institution,
-                    contact = whatsapp,
-                    field_of_interest = field,
-                    gender = sex,
-                    password = pass1,
-                )
-                user.set_password(pass1)
+                user = User.objects.create_user(uname, email, pass1 )
+                user.name = fname
+                user.program = progie
+                user.institution = institution
+                user.number = whatsapp
+                user.field_of_interest = field
+                user.gender = sex
+                user.placement_letter = pp
                 user.save()
                 
                 if request.FILES:
@@ -81,6 +77,7 @@ def signup(request,*args,**kwargs):
                         owner = User.objects.get(id = user.id),
                         pp = pp
                     )
+                    return redirect("/login/")
                     print("user account created successfully!!")
                 messages.info(request,"user account created successfully!!")
                 
@@ -93,3 +90,9 @@ def signup(request,*args,**kwargs):
             messages.info(request,"passwords do not match")
 
     return render(request,"SignUp.html",{})
+
+
+def error404(request, exception, template_name = '404.html'):
+    response = render(request, template_name)
+    response.status_code = 404
+    return response
