@@ -8,7 +8,7 @@ from setuptools import find_namespace_packages
 import json
 from . models import UserProfile,Gallery, User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login as auth_login, logout
+from django.contrib.auth import authenticate, login as auth_login,logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 
@@ -26,9 +26,7 @@ def login(request,*args,**kwargs):
         user = authenticate(username=username, password=password)
         if user:
             auth_login(request, user)
-            print("We almost there!!!")
-            print("We almost there!!!")
-            print("We almost there!!!")
+            
             return redirect('index')
         else:
             messages.info(request,"Invalid credentials")    
@@ -36,10 +34,10 @@ def login(request,*args,**kwargs):
     return render(request,"Login.html",{})
 
 
-@login_required(login_url="/login/")
+
 def logout(request,*args,**kwargs):
-    logout(request)
-    return redirect("/login/")
+    auth_logout(request)
+    return redirect("login")
 
 def signup(request,*args,**kwargs):
 
@@ -96,3 +94,39 @@ def error404(request, exception, template_name = '404.html'):
     response = render(request, template_name)
     response.status_code = 404
     return response
+
+def aboutus(request):
+    return render(request,"AboutUs.html",{})
+
+def ourteam(request):
+    return render(request,"OurTeam.html",{})
+
+def upcomingevents(request):
+    return render(request,'UpcomingEvents.html',{})
+
+def pastevents(request):
+    return render(request,"PastEvents.html",{})
+
+def galleryfullwidth(request):
+    return render(request,"GalleryFullWidth.html",{})
+
+def gallerygrid(request):
+    return render(request,"GalleryGrid.html",{})
+
+def ourcourses(request):
+    return render(request,"OurCourses.html",{})
+
+def directcall (request):
+    return render(request,"DirectCall.html",{})
+
+def sendemail(request):
+    return render(request,"SendEmail.html",{})
+
+def suggestionsbox(request):
+    return render(request,"SuggestionsBox.html",{})
+
+def applyforinternship(request):
+    return render(request,"ApplyForInternship.html",{})
+
+def userprofile (request):
+    return render(request,"UserProfile.html",{})

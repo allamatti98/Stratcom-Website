@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Babette">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Gallery | Stratcom UG</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Rubik:400,500,700%7cShadows+Into+Light&display=swap">
+  <link rel="stylesheet" href="{% static 'css/libraries.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <style>
+    .logo-light {
+      max-width: 30%;
+      height: auto;
+    }
+    .logo-dark {
+      max-width: 30%;
+      height: auto;
+    }
+    .client img{
+      max-width: 10%;
+      height: auto;
+    }
+    .zoom_icon img{
+      width: 10px;
+      height: 30px;
+    }
+    .carousel owl-carousel{
+      height: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+        <!-- =========================
+        Header
+    =========================== -->
+    <header id="header" class="header header-transparent header-layout1">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'images/StratcomLogoRemoved.png'  %}" class="logo-light" alt="logo">
+            <img src="{% static 'images/StratcomLogoRemoved.png'  %}" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav__item with-dropdown">
+                <a href="/" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">Home</a>                            
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">About</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="/aboutus" class="nav__item-link">About Us</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="/ourteam" class="nav__item-link">Our Team</a></li>
+                  <!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Events</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="/upcomingevents" class="nav__item-link">Upcoming Events</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="/pastevents" class="nav__item-link">Past Events</a></li>
+                  <!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Gallery</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="/galleryfullwidth" class="nav__item-link">Gallery Full Width</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="/gallerygrid" class="nav__item-link">Gallery Grid</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Our Courses</a>
+                <ul class="dropdown-menu">
+                  
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Coding</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Morning Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Evening Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">CISCO Networking</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Morning Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Evening Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">PC Repair</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Evening Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Embedded Systems</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Morning Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Application Development</a>
+                    <ul class="dropdown-menu">
+                      
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
+                      </li><!-- /.nav-item -->
+
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->                  
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Contact Us</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a class="nav__item-link" onclick="call()">Direct Call</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="mailto:stuartmcarthy@gmail.com" class="nav__item-link">Send Email</a></li>
+                  <!-- /.nav-item -->
+              
+                  
+              </li><!-- /.nav-item -->
+              <!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+          </div><!-- /.navbar-collapse -->
+          <div class="navbar-actions-wrap">
+            <div class="navbar-actions d-flex align-items-center">
+              <a href="#" class="navbar__action-btn search-popup-trigger"><i class="fa fa-search"></i></a>
+              <a href="#"
+                class="navbar__action-btn navbar__action-btn-reserve btn btn__primary" onclick="apply()">Apply For Internship</a>
+              <!-- <ul class="social__icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+
+              </ul> -->
+              <!-- /.social__icons -->
+              <!--               
+              <div style="float: right;">
+                <a href="#" class=" btn__primary" style="padding-right: 10px;"><i class="fa fa-user"></i></a>
+              </div> -->
+
+              <div class="testimonial__thumb">
+                <a href="/userprofile"><img src="{% static 'images/girl-camera-portrait-model.jpg' %}" alt="author thumb"></a>
+              </div>
+
+            </div><!-- /.navbar-actions -->
+          </div><!-- /.navbar-actions-wrap -->
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    
+      <!-- ========================
+       page title 
+    =========================== -->
+    <section id="page-title" class="page-title page-title-layout4 text-center bg-overlay bg-overlay-2 bg-parallax">
+      <div class="bg-img"><img src="{% static 'images/wp6549833.webp' %}" alt="background"></div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <span class="pagetitle__subheading">Stratcom Memories</span>
+            <h1 class="pagetitle__heading">Our Gallery</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+              </ol>
+            </nav>
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.page-title -->
+
+    <!-- =========================== 
+      portfolio Gallery 
+    ============================= -->
+    <section id="portfolioGallery" class="portfolio portfolio-gallery portfolio-gallery-no-margin">
+      <div class="container-fluid col-padding-0">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <ul class="portfolio-filter justify-content-center">
+              <li><a class="filter active" href="#" data-filter="all">All</a></li>
+              <li><a class="filter" href="#" data-filter=".filter-restaurant">Instructors</a></li>
+              <li><a class="filter" href="#" data-filter=".filter-staff">Interns</a></li>
+              <li><a class="filter" href="#" data-filter=".filter-clients">Project Contractors</a></li>
+            </ul><!-- /.portfolio-filter  -->
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+        <div class="row filtered-items-wrap">
+          <!-- portfolio item #1 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-restaurant">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #2 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-staff">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #3 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-clients">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #4 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-restaurant ">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #5 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-staff">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #6 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-clients">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #7 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-clients">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #8 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-staff">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #9 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-restaurant  portfolio-hidden">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #10 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-clients portfolio-hidden">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #11 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-staff portfolio-hidden">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #12 -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mix filter-restaurant portfolio-hidden">
+            <div class="portfolio-item">
+              <div class="portfolio__img">
+                <img src="{% static 'images/person.jpg' %}" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio__hover">
+                <a href="{% static 'images/person.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+              </div><!-- /.portfolio__hover-->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <a class="btn btn__secondary btn__link mt-40 loadMoreportfolio" href="#">Load more</a>
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.portfolio Gallery -->
+
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer id="footer" class="footer footer-layout1 text-center bg-dark">
+        <div class="footer-inner">
+          <div class="container">
+            <div class="footer-top">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 position-static">
+                  
+                </div><!-- /.col-lg-12 -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="contact-box">
+                    <h6 class="contact__box-title">Stratcom's Address</h6>
+                    <ul class="contact__box-list list-unstyled">
+                      <li>Plot 23 Bombo Road, Big building, above UMEME Office and opposite Fuelex</li>
+                    </ul>
+                  </div><!-- /.contact-box -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="contact-box">
+                    <h6 class="contact__box-title">Working Hours</h6>
+                    <ul class="contact__box-list list-unstyled">
+                      <li>Monday - Friday: 8:00 am - 8:00 pm</li>
+                      <li>Saturday - Sunday: 10:00 am - 5:00 pm</li>
+                    </ul>
+                  </div><!-- /.contact-box -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="contact-box">
+                    <h6 class="contact__box-title">Contact Us</h6>
+                    <ul class="contact__box-list list-unstyled">
+                      <li><span>Main Email:</span><a href="stuartmcarthy17@gmail.com">stuartmcarthy17@gmail.com</a></li>
+                      <li><span>Phone:</span><a href="tel:0200563765">0200563765</a></li>
+                    </ul>
+                  </div><!-- /.contact-box -->
+                </div><!-- /.col-lg-4 -->
+              </div><!-- /.row -->
+            </div><!-- /.footer-top -->
+            <div class="footer-middle">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 position-static">
+                  <div class="footer__logo-wrap text-center">
+                    <img src="{% static 'images/StratcomLogoRemoved.png' %}" alt="logo" class="footer__logo" style="max-width: 100px;">
+                  </div>
+                </div><!-- /.col-lg-12 -->
+              </div><!-- /.row -->
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                  <p class="mb-20">
+                    Stratcom remains the top place to do your internship simply because of the variety of time options one can
+                    choose from and also because it is competely hands on, hence equiping the students with the necessary skillset
+                    h in a nutshell is the whole purpose of Internship.
+                  </p>
+                  <a href="reservation.html" class="btn btn__primary btn__bordered btn__lg">Apply For Internship</a>
+                </div><!-- /.col-lg-6 -->
+              </div><!-- /.row -->
+            </div><!-- /.footer-middle -->
+          </div><!-- /.container -->
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <div class="footer__copyright mb-30">
+                    <span>&copy; Stratcom UG, Designed by </span>
+                    <a href="http://themeforest.net/user/7oroof" class="color-theme">Dayan Allamatti</a>
+                  </div>
+                  <ul class="social__icons social__icons-white justify-content-center">
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-tripadvisor"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  </ul><!-- /.social__icons -->
+                </div>
+              </div><!-- /.row -->
+            </div><!-- /.container -->
+            <svg class="footer__divider-shape-bottom" xmlns="http://www.w3.org/2000/svg" width="142" height="17"
+              viewBox="0 0 142 17">
+              <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+            </svg>
+          </div><!-- /.Footer-bottom -->
+        </div><!-- /.Footer-inner -->
+      </footer><!-- /.Footer -->
+  
+
+    <button id="scrollTopBtn"><i class="fa fa-angle-up"></i></button>
+
+    <div class="search-popup">
+      <i class="fa fa-times close-search"></i>
+      <form class="module__search-form">
+        <input type="text" class="search__input" placeholder="Type Words Then Enter">
+        <button class="module__search-btn"><i class="fa fa-search"></i></button>
+      </form>
+    </div><!-- /.search-popup -->
+
+  </div>
+  <!-- /.wrapper -->
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

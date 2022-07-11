@@ -84,7 +84,11 @@
                         <img src="{% static 'images/StratcomLogoRemoved.png' %}" style="width: 185px;" alt="logo">
                         <h4 class="mt-1 mb-5 pb-1">The Epitome of Technology</h4>
                       </div>
-    
+                      {% if messages %}
+                      {% for message in messages %}
+                        <h3>{{ message }}</h3>
+                      {% endfor %}
+                    {% endif %}
                   
                 </div>
   

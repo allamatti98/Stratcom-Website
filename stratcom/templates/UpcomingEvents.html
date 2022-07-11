@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Babette">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Upcoming Events | Stratcom UG</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Rubik:400,500,700%7cShadows+Into+Light&display=swap">
+  <link rel="stylesheet" href="{% static 'css/libraries.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <style>
+    .logo-light {
+      max-width: 30%;
+      height: auto;
+    }
+    .logo-dark {
+      max-width: 30%;
+      height: auto;
+    }
+    </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+        <!-- =========================
+        Header
+    =========================== -->
+    <header id="header" class="header header-transparent header-layout1">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'images/StratcomLogoRemoved.png'  %}" class="logo-light" alt="logo">
+            <img src="{% static 'images/StratcomLogoRemoved.png'  %}" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav__item with-dropdown">
+                <a href="/" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">Home</a>                            
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">About</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="/aboutus" class="nav__item-link">About Us</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="/ourteam" class="nav__item-link">Our Team</a></li>
+                  <!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Events</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="/upcomingevents" class="nav__item-link">Upcoming Events</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="/pastevents" class="nav__item-link">Past Events</a></li>
+                  <!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Gallery</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="/galleryfullwidth" class="nav__item-link">Gallery Full Width</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="/gallerygrid" class="nav__item-link">Gallery Grid</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Our Courses</a>
+                <ul class="dropdown-menu">
+                  
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Coding</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Morning Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Evening Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">CISCO Networking</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Morning Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Evening Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">PC Repair</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Evening Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Embedded Systems</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Morning Class</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Application Development</a>
+                    <ul class="dropdown-menu">
+                      
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
+                      </li><!-- /.nav-item -->
+
+                      <li class="nav__item">
+                        <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->                  
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Contact Us</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a class="nav__item-link" onclick="call()">Direct Call</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="mailto:stuartmcarthy@gmail.com" class="nav__item-link">Send Email</a></li>
+                  <!-- /.nav-item -->
+              
+                  
+              </li><!-- /.nav-item -->
+              <!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+          </div><!-- /.navbar-collapse -->
+          <div class="navbar-actions-wrap">
+            <div class="navbar-actions d-flex align-items-center">
+              <a href="#" class="navbar__action-btn search-popup-trigger"><i class="fa fa-search"></i></a>
+              <a href="#"
+                class="navbar__action-btn navbar__action-btn-reserve btn btn__primary" onclick="apply()">Apply For Internship</a>
+              <!-- <ul class="social__icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+
+              </ul> -->
+              <!-- /.social__icons -->
+              <!--               
+              <div style="float: right;">
+                <a href="#" class=" btn__primary" style="padding-right: 10px;"><i class="fa fa-user"></i></a>
+              </div> -->
+
+              <div class="testimonial__thumb">
+                <a href="/userprofile"><img src="{% static 'images/girl-camera-portrait-model.jpg' %}" alt="author thumb"></a>
+              </div>
+
+            </div><!-- /.navbar-actions -->
+          </div><!-- /.navbar-actions-wrap -->
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    <!-- ========================
+       page title 
+    =========================== -->
+    <section id="page-title" class="page-title page-title-layout5 text-center bg-overlay bg-overlay-2 bg-parallax">
+      <div class="bg-img"><img src="{% static 'images/Wallpaper 6.jpg' %}" alt="background"></div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <span class="pagetitle__subheading">Don’t Miss</span>
+            <h1 class="pagetitle__heading">Our Upcoming Events.</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="blog-grid.html">Events</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Upcoming Events</li>
+              </ol>
+            </nav>
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.page-title -->
+
+    <!-- ======================
+      Blog standard
+    ========================= -->
+    <section id="blogstandardRightSidebar" class="blog blog-standard pb-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-8">
+            <!-- Post Item #1 -->
+            <div class="post-item">
+              <div class="post__img">
+                <a href="#">
+                  <img src="{% static 'images/Club 1.jfif' %}" alt="post image">
+                </a>
+              </div><!-- /.post-img -->
+              <div class="post__content">
+                <div class="post__meta">
+                  <span class="post__meta-date">July 29, 2022</span>
+                  <div class="post__meta-cat">
+                    <a href="#">Food</a><a href="#">Drinks</a>
+                  </div><!-- /.post-meta-cat -->
+                  <span class="post__meta-comments-count">Comments: <span class="color-theme">2</span></span>
+                </div><!-- /.post-meta -->
+                <h4 class="post__title"><a href="#">Stratcom Event Afterparty (Stratcom Connect)</a></h4>
+                <p class="post__desc">
+                    We are all eagerly waiting for this one, it's the party that waves goodbye to all interns and helps create connections...
+                </p>
+                <a href="#" class="btn btn__link btn__secondary">Read More</a>
+              </div><!-- /.post-content -->
+            </div><!-- /.post-item -->
+            <!-- Post Item #2 -->
+            <div class="post-item">
+              <div class="post__img">
+                <a href="#">
+                  <img src="{% static 'images/Food 2.jpg' %}" alt="post image">
+                </a>
+              </div><!-- /.post-img -->
+              <div class="post__content">
+                <div class="post__meta">
+                  <span class="post__meta-date">August 11, 2022</span>
+                  <div class="post__meta-cat">
+                    <a href="#">Food</a><a href="#">Pizza</a>
+                  </div><!-- /.post-meta-cat -->
+                  <span class="post__meta-comments-count">Comments: <span class="color-theme">5</span></span>
+                </div><!-- /.post-meta -->
+                <h4 class="post__title"><a href="#">Stratcom Restaurant New Pizza Launch</a></h4>
+                <p class="post__desc">We’ve all been dying to know which type of magic is in the peparoni Pizza.
+                    Stratcom Restaurant, on the 11th day of August this very year shall be launching their Peparoni Pizza.
+                    <br>
+                    In all honestly we can't wait. 
+                </p>
+                <a href="#" class="btn btn__link btn__secondary">Read More</a>
+              </div><!-- /.post-content -->
+            </div><!-- /.post-item -->
+            <!-- Post Item #3 -->
+            <div class="post-item">
+              <div class="post__img">
+                <a href="#">
+                  <img src="{% static 'images/Wallpaper 4.jpg' %}" alt="post image">
+                </a>
+              </div><!-- /.post-img -->
+              <div class="post__content">
+                <div class="post__meta">
+                  <span class="post__meta-date">October 8, 2022</span>
+                  <div class="post__meta-cat">
+                    <a href="#">ICT</a><a href="#">Entrepreneurs</a>
+                  </div><!-- /.post-meta-cat -->
+                  <span class="post__meta-comments-count">Comments: <span class="color-theme">5</span></span>
+                </div><!-- /.post-meta -->
+                <h4 class="post__title"><a href="#">The Stratcom I.T. meet and greet</a></h4>
+                <p class="post__desc">
+                    This is a chance for all I.T. enthusiasts to rub shoulders with the country's elite I.T. personell.
+                    <br>
+                    We can't miss this for the world. Be there...
+                </p>
+                <a href="#" class="btn btn__link btn__secondary">Read More</a>
+              </div><!-- /.post-content -->
+            </div><!-- /.post-item -->
+            <!-- Post Item #4 -->
+            <div class="post-item">
+              <div class="post__img">
+                <a href="#">
+                  <img src="{% static 'images/Wallpaper 5.jpg' %}" alt="post image">
+                </a>
+              </div><!-- /.post-img -->
+              <div class="post__content">
+                <div class="post__meta">
+                  <span class="post__meta-date">December 22, 2022</span>
+                  <div class="post__meta-cat">
+                    <a href="#">Christmas</a><a href="#">Party</a>
+                  </div><!-- /.post-meta-cat -->
+                  <span class="post__meta-comments-count">Comments: <span class="color-theme">1</span></span>
+                </div><!-- /.post-meta -->
+                <h4 class="post__title"><a href="#">Stratcom Pre-Christmas party</a></h4>
+                <p class="post__desc">
+                    By now we all know the magic that happens in December not to mention Christmas week. Miss only if you must,
+                    <br>
+                    Otherwise come one come all.
+                    <br>
+                    All drinks and eats on the house.
+                </p>
+                <a href="#" class="btn btn__link btn__secondary">Read More</a>
+              </div><!-- /.post-content -->
+            </div><!-- /.post-item -->
+            <nav class="pagination-area text-center">
+              <ul class="pagination justify-content-center mb-30">
+                <li><a class="current" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+              </ul>
+            </nav><!-- .pagination-area -->
+          </div><!-- /.col-lg-8 -->
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <aside class="sidebar">
+              <div class="widget widget-search">
+                <h5 class="widget__title">Search</h5>
+                <div class="widget__content">
+                  <form class="widget__form-search">
+                    <input type="text" class="form-control" placeholder="Type and hit enter ...">
+                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                  </form>
+                </div><!-- /.widget-content -->
+              </div><!-- /.widget-search -->
+              <div class="widget widget-categories">
+                <h5 class="widget__title">categories</h5>
+                <div class="widget-content">
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#"> Coding<span>(4 Weeks)</span></a></li>
+                        <li><a href="#">Networking <span>(4 Weeks)</span></a></li>
+                        <li><a href="#">Embedded Systems <span>(2 Weeks)</span></a></li>
+                        <li><a href="#">Application Development <span>(2 Weeks)</span></a></li>
+                        <li><a href="#">PC Repair <span>(2 Weeks)</span></a></li>
+                      </ul>
+                </div><!-- /.widget-content -->
+              </div><!-- /.widget-categories -->
+              <div class="widget widget-posts">
+                <h5 class="widget__title">Recent Posts</h5>
+                <div class="widget__content">
+                <!-- post item #1 -->
+                <div class="widget-post-item">
+                    <div class="widget__post-img">
+                      <a href="#"><img src="{% static 'images/Cisco1.jpg' %}" alt="product"></a>
+                    </div><!-- /.widget-post-img -->
+                    <div class="widget__post-content">
+                      <span class="widget__post-date">July 09, 2022</span>
+                      <h6 class="widget__post-title"><a href="#">Nobody should do internship from a place other than Stratcom.</a></h6>
+                    </div><!-- /.widget-post-content -->
+                  </div><!-- /.widget-post-item -->
+                  <!-- post item #2 -->
+                  <div class="widget-post-item">
+                    <div class="widget__post-img">
+                      <a href="#"><img src="{% static 'images/Cisco2.jpg' %}" alt="product"></a>
+                    </div><!-- /.widget-post-img -->
+                    <div class="widget__post-content">
+                      <span class="widget__post-date">July 8, 2022</span>
+                      <h6 class="widget__post-title"><a href="#">Good and outstanding premises.</a></h6>
+                    </div><!-- /.widget-post-content -->
+                  </div><!-- /.widget-post-item -->
+                </div><!-- /.widget-content -->
+              </div><!-- /.widget-posts -->
+              <div class="widget widget-tags">
+                <h5 class="widget__title">Tags</h5>
+                <div class="widget-content">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Responsive</a></li>
+                    <li><a href="#">Fresh</a></li>
+                    <li><a href="#">Modern</a></li>
+                    <li><a href="#">Corporate</a></li>
+                    <li><a href="#">Business</a></li>
+                  </ul>
+                </div><!-- /.widget-content -->
+              </div><!-- /.widget-Tags -->
+            </aside><!-- /.sidebar -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.blog standard -->
+
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer id="footer" class="footer footer-layout1 text-center bg-dark">
+        <div class="footer-inner">
+          <div class="container">
+            <div class="footer-top">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 position-static">
+                 
+                </div><!-- /.col-lg-12 -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="contact-box">
+                    <h6 class="contact__box-title">Stratcom's Address</h6>
+                    <ul class="contact__box-list list-unstyled">
+                      <li>Plot 23 Bombo Road, Big building, above UMEME Office and opposite Fuelex</li>
+                    </ul>
+                  </div><!-- /.contact-box -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="contact-box">
+                    <h6 class="contact__box-title">Working Hours</h6>
+                    <ul class="contact__box-list list-unstyled">
+                      <li>Monday - Friday: 8:00 am - 8:00 pm</li>
+                      <li>Saturday - Sunday: 10:00 am - 5:00 pm</li>
+                    </ul>
+                  </div><!-- /.contact-box -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="contact-box">
+                    <h6 class="contact__box-title">Contact Us</h6>
+                    <ul class="contact__box-list list-unstyled">
+                      <li><span>Main Email:</span><a href="stuartmcarthy17@gmail.com">stuartmcarthy17@gmail.com</a></li>
+                      <li><span>Phone:</span><a href="tel:0200563765">0200563765</a></li>
+                    </ul>
+                  </div><!-- /.contact-box -->
+                </div><!-- /.col-lg-4 -->
+              </div><!-- /.row -->
+            </div><!-- /.footer-top -->
+            <div class="footer-middle">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 position-static">
+                  <div class="footer__logo-wrap text-center">
+                    <img src="{% static 'images/StratcomLogoRemoved.png' %}" alt="logo" class="footer__logo" style="max-width: 100px;">
+                  </div>
+                </div><!-- /.col-lg-12 -->
+              </div><!-- /.row -->
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                  <p class="mb-20">
+                    Stratcom remains the top place to do your internship simply because of the variety of time options one can
+                    choose from and also because it is competely hands on, hence equiping the students with the necessary skillset
+                    h in a nutshell is the whole purpose of Internship.
+                  </p>
+                  <a href="reservation.html" class="btn btn__primary btn__bordered btn__lg">Apply For Internship</a>
+                </div><!-- /.col-lg-6 -->
+              </div><!-- /.row -->
+            </div><!-- /.footer-middle -->
+          </div><!-- /.container -->
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <div class="footer__copyright mb-30">
+                    <span>&copy; Stratcom UG, Designed by </span>
+                    <a href="http://themeforest.net/user/7oroof" class="color-theme">Dayan Allamatti</a>
+                  </div>
+                  <ul class="social__icons social__icons-white justify-content-center">
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-tripadvisor"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  </ul><!-- /.social__icons -->
+                </div>
+              </div><!-- /.row -->
+            </div><!-- /.container -->
+            <svg class="footer__divider-shape-bottom" xmlns="http://www.w3.org/2000/svg" width="142" height="17"
+              viewBox="0 0 142 17">
+              <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+            </svg>
+          </div><!-- /.Footer-bottom -->
+        </div><!-- /.Footer-inner -->
+      </footer><!-- /.Footer -->
+
+      
+    <button id="scrollTopBtn"><i class="fa fa-angle-up"></i></button>
+
+    <div class="search-popup">
+      <i class="fa fa-times close-search"></i>
+      <form class="module__search-form">
+        <input type="text" class="search__input" placeholder="Type Words Then Enter">
+        <button class="module__search-btn"><i class="fa fa-search"></i></button>
+      </form>
+    </div><!-- /.search-popup -->
+
+  </div>
+  <!-- /.wrapper -->
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
