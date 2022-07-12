@@ -76,8 +76,9 @@ def signup(request,*args,**kwargs):
                         pp = pp
                     )
                     return redirect("/login/")
-                    print("user account created successfully!!")
+                    print("Your User Account has been created successfully!!")
                 messages.info(request,"user account created successfully!!")
+                return redirect("/login/")
                 
             except Exception as e:
                 print("user with the same Username Exits")

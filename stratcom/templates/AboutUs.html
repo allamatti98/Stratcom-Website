@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    {% load static %}
+  {% load static %}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -19,11 +19,11 @@
       max-width: 30%;
       height: auto;
     }
+
     .logo-dark {
       max-width: 30%;
       height: auto;
     }
-    
   </style>
 
 
@@ -31,7 +31,7 @@
 
 <body>
   <div class="wrapper">
-        <!-- =========================
+    <!-- =========================
         Header
     =========================== -->
     <header id="header" class="header header-transparent header-layout1">
@@ -47,10 +47,10 @@
           <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav ml-auto">
               <li class="nav__item with-dropdown">
-                <a href="/" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">Home</a>                            
+                <a href="/" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Home</a>
               </li><!-- /.nav-item -->
               <li class="nav__item with-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">About</a>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">About</a>
                 <ul class="dropdown-menu">
                   <li class="nav__item"><a href="/aboutus" class="nav__item-link">About Us</a></li>
                   <!-- /.nav-item -->
@@ -79,7 +79,7 @@
               <li class="nav__item with-dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Our Courses</a>
                 <ul class="dropdown-menu">
-                  
+
                   <li class="nav__item dropdown-submenu">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Coding</a>
                     <ul class="dropdown-menu">
@@ -141,9 +141,10 @@
                   </li><!-- /.nav-item -->
 
                   <li class="nav__item dropdown-submenu">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Application Development</a>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Application
+                      Development</a>
                     <ul class="dropdown-menu">
-                      
+
                       <li class="nav__item">
                         <a href="/ourcourses" class="nav__item-link">Afternoon Class</a>
                       </li><!-- /.nav-item -->
@@ -152,7 +153,7 @@
                         <a href="/ourcourses" class="nav__item-link">Weekend Class</a>
                       </li><!-- /.nav-item -->
                     </ul><!-- /.dropdown-menu -->
-                  </li><!-- /.nav-item -->                  
+                  </li><!-- /.nav-item -->
                 </ul><!-- /.dropdown-menu -->
               </li><!-- /.nav-item -->
               <li class="nav__item with-dropdown">
@@ -160,10 +161,11 @@
                 <ul class="dropdown-menu">
                   <li class="nav__item"><a class="nav__item-link" onclick="call()">Direct Call</a></li>
                   <!-- /.nav-item -->
-                  <li class="nav__item"><a href="mailto:stuartmcarthy@gmail.com" class="nav__item-link">Send Email</a></li>
+                  <li class="nav__item"><a href="mailto:stuartmcarthy@gmail.com" class="nav__item-link">Send Email</a>
+                  </li>
                   <!-- /.nav-item -->
-              
-                  
+
+
               </li><!-- /.nav-item -->
               <!-- /.nav-item -->
             </ul><!-- /.navbar-nav -->
@@ -171,8 +173,8 @@
           <div class="navbar-actions-wrap">
             <div class="navbar-actions d-flex align-items-center">
               <a href="#" class="navbar__action-btn search-popup-trigger"><i class="fa fa-search"></i></a>
-              <a href="#"
-                class="navbar__action-btn navbar__action-btn-reserve btn btn__primary" onclick="apply()">Apply For Internship</a>
+              <a href="#" class="navbar__action-btn navbar__action-btn-reserve btn btn__primary" onclick="apply()">Apply
+                For Internship</a>
               <!-- <ul class="social__icons">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -186,7 +188,8 @@
               </div> -->
 
               <div class="testimonial__thumb">
-                <a href="/userprofile"><img src="{% static 'images/girl-camera-portrait-model.jpg' %}" alt="author thumb"></a>
+                <a href="/userprofile"><img src="{% static 'images/girl-camera-portrait-model.jpg' %}"
+                    alt="author thumb"></a>
               </div>
 
             </div><!-- /.navbar-actions -->
@@ -200,8 +203,8 @@
        page title 
     =========================== -->
     <section id="page-title" class="page-title page-title-layout1 text-center bg-overlay bg-overlay-2 bg-parallax">
-      <div class="bg-img"><img src="{% static 'images/Food 2.jpg' %}" alt="background"></div>
-      
+      <div class="bg-img"><img src="{% static 'images/Team3.webp' %}" alt="background"></div>
+
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
@@ -225,38 +228,42 @@
                   <p>
                     The word Stratcom comes from a latin word 'Strata' and the English word 'Computer'.
                     <br>
-                    Strata means fast and a Computer is obviously known to everyone. 
+                    Strata means fast and a Computer is obviously known to everyone.
                     <br>
                     So Stratcom is a place
                     where Computer skills are taught and instilled into people of all ages in a record period of time.
                   </p>
-                  
+
                   <p>
                     That being said, Stratcom has a good reputation, experienced lecturers and also a conducive
-                    environment. 
-                    
+                    environment.
+
                     <br>
                     There is also free breakfast and a restaurant in case an intern feels the need to eat again
                     later during the day.
                   </p>
                   <div class="post__img">
                     <a href="#">
-                      <img src="{% static 'images/person.jpg' %}" alt="post image">
+                      <img src="{% static 'images/Stratcom1.jpg' %}" alt="post image">
                     </a>
                   </div><!-- /.post-img -->
                   <p>
-                    Stratcom also offers a wide range of study times,for those that study during weekdays, one can choose morning (8:00am-12:pm) or afternoon
-                    (12:00pm-4:00pm) or even evening (5:00pm-9:00pm) while those that study over the weekend study from morning till evening 
+                    Stratcom also offers a wide range of study times,for those that study during weekdays, one can
+                    choose morning (8:00am-12:pm) or afternoon
+                    (12:00pm-4:00pm) or even evening (5:00pm-9:00pm) while those that study over the weekend study from
+                    morning till evening
                     only twice a week (on the weekends).
                   </p>
-                  
+
                   <p>
                     There is also free breakfast and a restaurant in case an intern feels the need to eat again
                     later during the day.
                   </p>
                   <p>
-                    Stratcom also offers a wide range of study times,for those that study during weekdays, one can choose morning (8:00am-12:pm) or afternoon
-                    (12:00pm-4:00pm) or even evening (5:00pm-9:00pm) while those that study over the weekend study from morning till evening 
+                    Stratcom also offers a wide range of study times,for those that study during weekdays, one can
+                    choose morning (8:00am-12:pm) or afternoon
+                    (12:00pm-4:00pm) or even evening (5:00pm-9:00pm) while those that study over the weekend study from
+                    morning till evening
                     only twice a week (on the weekends)
                   </p>
                 </div><!-- /.post-desc -->
@@ -282,7 +289,7 @@
             </div><!-- /.post-share -->
             <div class="blog-widget blog-author">
               <div class="blog__author-avatar">
-                <img src="{% static 'images/gallery2.jpg' %}" alt="avatar">
+                <img src="{% static 'images/person4.jpg' %}" alt="avatar">
               </div><!-- /.author-avatar  -->
               <div class="blog__author-content">
                 <p class="blog__author-bio">
@@ -300,7 +307,7 @@
               <ul class="comments-list list-unstyled mb-0">
                 <li class="comment__item">
                   <div class="comment__avatar">
-                    <img src="{% static 'images/bk.jpg' %}" alt="avatar">
+                    <img src="{% static 'images/Person8.jpg' %}" alt="avatar">
                   </div>
                   <div class="comment__content">
                     <h6 class="comment__author">Sssegawa Arnold</h6>
@@ -313,15 +320,17 @@
                 </li><!-- /.comment -->
                 <li class="comment__item">
                   <div class="comment__avatar">
-                    <img src="{% static 'images/gallery1.jpg' %}" alt="avatar">
+                    <img src="{% static 'images/ProfilePic1.jpg' %}" alt="avatar">
                   </div>
                   <div class="comment__content">
                     <h6 class="comment__author">Sentamu Ivan</h6>
                     <span class="comment__date">Dec 28, 2021 - 03:28 pm</span>
                     <p class="comment__desc">
-                      Stratcom also offers a wide range of study times,for those that study during weekdays, one can choose morning (8:00am-12:pm) or afternoon
-                    (12:00pm-4:00pm) or even evening (5:00pm-9:00pm) while those that study over the weekend study from morning till evening 
-                    only twice a week (on the weekends)
+                      Stratcom also offers a wide range of study times,for those that study during weekdays, one can
+                      choose morning (8:00am-12:pm) or afternoon
+                      (12:00pm-4:00pm) or even evening (5:00pm-9:00pm) while those that study over the weekend study
+                      from morning till evening
+                      only twice a week (on the weekends)
                     </p>
                     <a class="comment__reply" href="#">reply</a>
                   </div>
@@ -388,17 +397,18 @@
                   <!-- post item #1 -->
                   <div class="widget-post-item">
                     <div class="widget__post-img">
-                      <a href="#"><img src="{% static 'images/Cisco1.jpg' %}" alt="product"></a>
+                      <a href="#"><img src="{% static 'images/ProfilePic7.jpg' %}" alt="product"></a>
                     </div><!-- /.widget-post-img -->
                     <div class="widget__post-content">
                       <span class="widget__post-date">July 09, 2022</span>
-                      <h6 class="widget__post-title"><a href="#">Nobody should do internship from a place other than Stratcom.</a></h6>
+                      <h6 class="widget__post-title"><a href="#">Nobody should do internship from a place other than
+                          Stratcom.</a></h6>
                     </div><!-- /.widget-post-content -->
                   </div><!-- /.widget-post-item -->
                   <!-- post item #2 -->
                   <div class="widget-post-item">
                     <div class="widget__post-img">
-                      <a href="#"><img src="{% static 'images/Cisco2.jpg' %}" alt="product"></a>
+                      <a href="#"><img src="{% static 'images/ProfilePic5.jpg' %}" alt="product"></a>
                     </div><!-- /.widget-post-img -->
                     <div class="widget__post-content">
                       <span class="widget__post-date">July 8, 2022</span>
@@ -431,7 +441,7 @@
           <div class="footer-top">
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-12 position-static">
-               
+
               </div><!-- /.col-lg-12 -->
               <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="contact-box">
@@ -465,18 +475,22 @@
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-12 position-static">
                 <div class="footer__logo-wrap text-center">
-                  <img src="{% static 'images/StratcomLogoRemoved.png' %}" alt="logo" class="footer__logo" style="max-width: 100px;">
+                  <img src="{% static 'images/StratcomLogoRemoved.png' %}" alt="logo" class="footer__logo"
+                    style="max-width: 100px;">
                 </div>
               </div><!-- /.col-lg-12 -->
             </div><!-- /.row -->
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                 <p class="mb-20">
-                  Stratcom remains the top place to do your internship simply because of the variety of time options one can
-                  choose from and also because it is competely hands on, hence equiping the students with the necessary skillset
+                  Stratcom remains the top place to do your internship simply because of the variety of time options one
+                  can
+                  choose from and also because it is competely hands on, hence equiping the students with the necessary
+                  skillset
                   h in a nutshell is the whole purpose of Internship.
                 </p>
-                <a href="reservation.html" class="btn btn__primary btn__bordered btn__lg">Apply For Internship</a>
+                <a href="reservation.html" class="btn btn__primary btn__bordered btn__lg">Let us do your I.T.
+                  Project</a>
               </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
           </div><!-- /.footer-middle -->
@@ -490,9 +504,12 @@
                   <a href="http://themeforest.net/user/7oroof" class="color-theme">Dayan Allamatti</a>
                 </div>
                 <ul class="social__icons social__icons-white justify-content-center">
+                  <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                   <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fa fa-tripadvisor"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                  <li><a href="#"><i class="fa fa-github"></i></a></li>
                 </ul><!-- /.social__icons -->
               </div>
             </div><!-- /.row -->
@@ -507,7 +524,6 @@
       </div><!-- /.Footer-inner -->
     </footer><!-- /.Footer -->
 
-    
     <button id="scrollTopBtn"><i class="fa fa-angle-up"></i></button>
 
     <div class="search-popup">
@@ -520,6 +536,18 @@
 
   </div>
   <!-- /.wrapper -->
+
+  <script>
+    function
+      call() {
+      alert("Call us on +2567639970");
+    }
+
+    function apply() {
+      alert("Your Internship Placement Request has been sent to Management")
+    }
+  </script>
+
 
   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
   <script src="{% static 'js/plugins.js' %}"></script>
